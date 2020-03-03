@@ -15,21 +15,21 @@ image: /images/blog/early-impressions-of-go-from-a-rust-programmer.jpg
 
 I've been using [Go](<https://en.wikipedia.org/wiki/Go_(programming_language)>) for the past few weeks. It's my first time using Go for a large (-ish), serious project. I've previously looked at Go a lot and played with examples and toy programs when researching features for [Rust](<https://en.wikipedia.org/wiki/Rust_(programming_language)>). Real programming is a very different experience.
 
-过去几周我一直在用 [Go](<https://en.wikipedia.org/wiki/Go_(programming_language)>) 语言编写程序。 这是我第一次使用 Go 进行一个稍大的、严肃的项目。在研究 [Rust](<https://en.wikipedia.org/wiki/Rust_(programming_language)>) 的特性时，我也看了很多关于 Go 的内容，包括体验示例和编写玩具程序。但真正用它编程又是一种完全不同的体验。
+过去几周，我一直在用 [Go](<https://en.wikipedia.org/wiki/Go_(programming_language)>) 语言编写程序。 这是我首次在大型且重要的项目中使用 Go。在研究 [Rust](<https://en.wikipedia.org/wiki/Rust_(programming_language)>) 的特性时，我也看了很多关于 Go 的内容，包括体验示例和编写玩具程序。但真正用它编程又是一种完全不同的体验。
 
 I thought it would be interesting to write about my impressions. I'll try and avoid too much comparison with Rust, but since that is the language I'm coming from, there will be some. I should declare in advance a strong bias for Rust, but I'll do my best to be objective.
 
-我觉得把我的印象写下来应该会很有趣。在这篇文章中，我会尽量避免将 Go 与 Rust 进行过多的比较，但由于我从 Rust 转向 Go，或多或少会有一些。应该事先声明的是，我对 Rust 有强烈的偏爱，但会尽力做到客观。
+我觉得把这次体验写下来应该会很有趣。在这篇文章中，我会尽量避免将 Go 与 Rust 进行过多的比较，不过，由于我是从 Rust 转向 Go，难免也会包含一些比较。应该事先声明的是，我更偏袒 Rust ，但会尽力做到客观。
 
 ## General impression 总体印象
 
 Programming with Go is nice. It had everything I wanted in the libraries and there were not too many rough edges. Learning it was a smooth experience, and it is a well-designed and practical language. Some examples: once you know the syntax, many idioms from other languages carry over to Go. Once you've learned some Go, it is relatively easy to predict other features. With some knowledge of other languages, I was able to read Go code and understand it without too much googling.
 
-用 Go 编程的感觉很棒。库程序里有我想要的一切，总体实现较为完善。学习体验也十分顺畅，不得不说，Go 是一种经过精心设计的实用性语言。举个例子：一旦你了解了 Go 的语法，就能将其他语言中惯用法移植到Go中。只要你学会一些 Go ，就可以相对轻易地预测Go语言的其他特性。凭借一些来自其他语言的知识，我能够阅读并理解 Go 代码，而不需要过多的搜索。
+用 Go 编程的感觉很棒。库程序里有我想要的一切，总体实现较为完善。学习体验也十分顺畅，不得不说，Go 是一种经过精心设计的实用性语言。举个例子：一旦你知悉了 Go 的语法，就能将其他语言中惯用法延续到 Go 中。只要你学会一些 Go ，就可以相对轻易地推测 Go 语言的其他特性。凭借一些来自其他语言的知识，我能够阅读并理解 Go 代码，而不需要过多的搜索（Google）。
 
 It is a lot less frustrating and a lot more productive than using C/C++, Java, Python, etc. It did feel, however, like part of that generation of languages. It has learnt some lessons from them, and I think it is probably the best language of that generation; but it is definitely part of that generation. It is an incremental improvement, rather than doing something radically different (to be clear, this is not a value judgement, incremental is often good in software engineering). A good example of this is `nil`: languages like Rust and Swift have removed the concept of `null` and eliminated a whole class of errors. Go makes it a bit less dangerous: no null _values_, distinguishes between `nil` and `0`. But the core idea is still there, and so is the common runtime error of dereferencing a null pointer.
 
-与 C/C++、 Java、 Python 等相比，Go 并没有那么多痛点，而且更具生产力。然而，他还是与这些语言处在同一个时代。尽管它从其他语言身上吸取了一些教训，甚至我个人认为它可能是那一代语言中最好的那个，但绝对还属于那一代语言。这是一种渐进式的改进，而不是推陈出新（需要明确的是，这不是意味着对其价值的批判，从软件工程的角度，渐进式改进通常会带来好的影响）。一个很好的例证是 `nil`：像 Rust 和 Swift 这样的语言已经去除了 `null` 的概念，并且消除了相关的一整类错误。Go 降低了一部分风险：_没有空值_，在 `nil` 和 `0` 之间进行区分。但其核心思想仍未改变，同样还会出现解空指针引用这种常见的运行时错误。
+与 C/C++、 Java、 Python 等相比，Go 并没有那么多痛点，而且更具生产力。然而，它还是与这些语言处在同一个时代。尽管它从其他语言身上吸取了一些教训，甚至我个人认为它可能是那一代语言中最好的那个，但绝对还属于那一代语言。这是一种渐进式的改进，而不是推陈出新（需要明确的是，这不是意味着对其价值的批判，从软件工程的角度，渐进式改进通常会带来好的影响）。一个很好的例证是 `nil`：像 Rust 和 Swift 这样的语言已经去除了 `null` 的概念，并且消除了相关的一整类错误。Go 降低了一部分风险：_没有空值_，在 `nil` 和 `0` 之间进行区分。但其核心思想仍未改变，同样还会出现解空指针引用这种常见的运行时错误。
 
 ## Learnability 易学性
 
@@ -75,7 +75,7 @@ Using generics or macros to reduce boilerplate is sometimes criticised for makin
 - Varargs.
 
 - 编译时间：绝对快，可以确定要比 Rust 快得多。但实际上，它并没有我预期的那么快（对于中型到大型项目，我感觉它的速度只是与 C/C++ 相接近，或者稍微快一点。而我更加期待能够即时编译。）
-- Go 例程和通道：值得称赞的是，Go 为编制例程和使用通道提供了轻量级的语法。尽管只是一个小细节，却使 Go 的并发编程体验比其他语言更优越，它真正揭示了语法的力量。
+- 协程（goroutine）和信道（channel）：值得称赞的是，Go 为生成协程和使用信道提供了轻量级的语法。尽管只是一个小细节，却使 Go 的并发编程体验比其他语言更优越，它真正揭示了语法的力量。
 - 接口：它们并不复杂，但是很容易理解和使用，并且在很多地方都很实用。
 - `if ...; ... { }` 语法：可以将变量的作用域限制在 `if` 语句真的很好。这与 Swift 及 Rust 中的 `if let` 起着相似的效果，但用途更为广泛（Go 没有像 Swift 和 Rust 那样的模式匹配，所以它无法使用 `if let` 。）
 - 测试和文档注释都很容易使用。
@@ -87,7 +87,7 @@ Using generics or macros to reduce boilerplate is sometimes criticised for makin
 
 In no particular order.
 
-没有特定的顺序。
+以下内容没有特定的顺序。
 
 - `nil` slices - `nil`, a `nil` slice, and an empty slice are all different. I'm pretty sure you only need two of those things, not three.
 - No first class enums. Using constants feels backwards.
@@ -129,23 +129,23 @@ As a language designer and a programmer, probably the thing that most surprised 
 
 Some things that stood out to me:
 
-有些东西让我印象深刻：
+一些让我印象深刻的地方：
 
 - There is nice syntax for returning multiple values and for channels, but the two cannot be used together because there are no tuple types.
 - There is a `for ... range` statement for iterating over arrays and slices, but you can't iterate over other collections because there is no concept of iterators.
 - Functions like `len` and `append`, are global, but there is no way to make your own functions global. Those global functions only work with built-in types. They can also be generic, even though Go has 'no generics'!
 - There is no operator overloading, this is particularly annoying with `==` because it means you can't use custom types as keys in a map unless they are _comparable_. That property is derived from the structure of a type and can't be overridden by the programmer.
 
-- 返回多个值和通道的语法很棒，但是这两个无法一起使用，因为没有元组类型。
+- 返回多个值和信道的语法很棒，但是这两个无法一起使用，因为没有元组类型。
 - 能够用 `for ... range` 语句对数组和切片进行迭代，但对其他集合就无能为力了，因为它缺乏迭代器的概念。
 - 像 `len` 或者 `append` 这样的函数是全局函数，但你自己的函数却无法转变成全局函数。这些全局函数只能使用内置类型。即便 Go「没有泛型」，它们也可以变得通用。
-- 没有运算符重载，那么 == 就会使人感到恼火。因为这意味着你不能在词典中使用自定义类型作为键，除非它们是可比较的。这一属性派生自类型结构，程序员无法重写该属性。
+- 没有运算符重载，那么 `==` 就会使人感到恼火。因为这意味着你不能在词典中使用自定义类型作为键，除非它们是可比较的。这一属性派生自类型结构，程序员无法重写该属性。
 
 ## Conclusion 总结
 
 Go is a simple, small, and enjoyable language. It has some odd corners, but is mostly well-designed. It is incredibly fast to learn, and avoids any features which are not well-known in other languages.
 
-Go 是一种简单、小巧、令人愉快的语言。它也有一些犄角旮旯，但绝大部分是经过精心设计的。它的学习速度令人难以置信，并且规避了其他语言中一些不那么广为人知的特性。
+Go 是一种简单、小巧、令人愉悦的语言。它也有一些犄角旮旯，但绝大部分是经过精心设计的。它的学习速度令人难以置信，并且规避了其他语言中一些不那么广为人知的特性。
 
 Go is a very different language to Rust. Although both can vaguely be described as systems languages or 'replacements' for C, they have different goals and applications, styles of language design, and priorities. Garbage collection is a really huge differentiator. Having GC in Go makes the language much simpler and smaller, and easy to reason about. Not having GC in Rust makes it _really_ fast (especially if you need guaranteed latency, not just high throughput), and enables features and programming patterns which are not possible in Go (or at least not without sacrificing performance).
 
