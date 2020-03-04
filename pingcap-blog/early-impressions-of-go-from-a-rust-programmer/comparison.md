@@ -1,8 +1,8 @@
 ---
 title: Early Impressions of Go from a Rust Programmer
-title-cn: 一位 Rust 程序员对 Go 的初步印象
+title-cn: Go 的初体验：一位 Rust 开发者的真情独白
 author: ["Nick Cameron"]
-translator: ["Chojan Shang(尚卓燃)", "Wucong(吴聪)"]
+translator: ["Chojan Shang(尚卓燃)", "Wucong(吴聪)", "张汉东"]
 date: 2020-02-26
 summary: Nick Cameron is a long-time Rust programmer who has recently started using Go. In this post, he talks about his early impressions of Go. Read this post to learn more.
 summary-cn: Nick Cameron 是长期使用 Rust 的程序员，最近开始接触 Go。在这篇文章中，他谈论了他对 Go 的初步印象。阅读这篇文章以了解更多信息。
